@@ -5,7 +5,7 @@ class EmployeePayrollData
     get name(){ return this._name;}
     set name(name)
     {
-    
+        //regular expression for name
         let nameRegex= RegExp('^[A-Z]{1}[a-zA-Z ]{2,}$');
         if(nameRegex.test(name))
             this._name=name;
@@ -54,6 +54,7 @@ class EmployeePayrollData
         else throw  'invalid date';
     }
 
+    //adding toString() method to contain gender as well as date also
     toString()
     {
          const options= {year:'numeric',month:'long',day:'numeric'};
